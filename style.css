@@ -1,0 +1,36 @@
+/* *{
+    border-style: dotted;
+} */
+
+body {
+    background-color: rgb(222, 222, 241);
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+#navbar {
+    text-align: center;
+    font-style: italic; 
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-style: solid;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+    float: left;
+}
+
+li a {
+    text-align: center;
+    padding: 15px;
+    display: block;
+}
