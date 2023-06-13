@@ -14,6 +14,8 @@ h1 {
 #navbar {
     text-align: center;
     font-style: italic; 
+    postion: fixed;
+    top: 0;
 }
 
 ul {
@@ -22,7 +24,7 @@ ul {
     padding: 0;
     overflow: hidden;
     border-style: solid;
-    /* top: 0; */
+    top: 0;
     /* width: 60%; */
     position: fixed;
     float: left;
