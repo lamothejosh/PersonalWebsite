@@ -1,29 +1,142 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <title>Josh Lamothe</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="HandheldFriendly" content="true">
-    </head>
+
+<head>
+  <title>Josh Lamothe</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      transition: background-color 0.5s;
+    }
+
+    #home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: 48px;
+      color: #fff;
+    }
+
+    #navbar {
+      background-color: transparent;
+      height: 80px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      transition: background-color 0.5s;
+    }
+
+    #navbar.show {
+      display: flex;
+      background-color: firebrick;
+    }
+
+    #navbar ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    #navbar li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    #navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 36px;
+      margin: 40px 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #333;
+      margin: 40px auto;
+      width: 80%;
+    }
+
+    #intro {
+      text-align: center;
+      padding: 0 20px;
+      margin-top: 80px;
+    }
+
+    #intro h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #intro h4 {
+      color: #333;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
 
 <body>
-    <div id="navbar">
-        <ul style="background-color: firebrick;">
-            <li> <a href="index.html">Home</a> </li> 
-            <li> <a href="CSprojects.html">CS Projects</a> </li>
-            <li> <a href="MechEprojects.html">Mechanical Engineering Projects</a> </li>
-        </ul>
-    </div>
-    <br> <br> <br> <br>
-    <h1> Welcome I'm Josh Lamothe </h1>
+  <div id="home">
+    <h1>Josh Lamothe</h1>
+  </div>
+
+  <div id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="CSprojects.html">CS Projects</a></li>
+      <li><a href="MechEprojects.html">Mechanical Engineering Projects</a></li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <br><br><br><br>
+    <h1>Welcome, I'm Josh Lamothe</h1>
     <hr>
 
-    <div id ="intro">
-        <h2>Who am I?</h2>
-        <h4> I'm a student at Tufts University (Go Jumbos)<br> <br> I'm currently pursing a BS in Mechanical Engineering, with a minor in Computer Science. <br><br> Currently I am a sophomore in the class of 2025 </h3>
+    <div id="intro">
+      <h2>Who am I?</h2>
+      <h4>I'm a student at Tufts University (Go Jumbos)<br><br>I'm currently pursuing a BS in Mechanical Engineering, with a minor in Computer Science.<br><br>Currently, I am a rising junior in the class of 2025</h4>
     </div>
-    
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var navbar = document.getElementById('navbar');
+      var content = document.getElementById('content');
+      if (window.pageYOffset > 0) {
+        navbar.classList.add('show');
+        document.body.style.backgroundColor = '#fff';
+      } else {
+        navbar.classList.remove('show');
+        document.body.style.backgroundColor = '#000';
+      }
+    });
+  </script>
 </body>
+
+</html>
