@@ -1,5 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+   
+
+.centered-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust this value for desired vertical centering */
+}
+
+
+.project-section {
+    max-width: 800px;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    display: block;
+    margin: auto;
+}
+
+.project-description {
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+</style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,5 +63,11 @@
     </div>
     <br> <br> <br> <br>
     <h1>Computer Science Projects</h1> <hr>
+
+    <div class="Face-detection">
+        <h2 class="project-title">Face Detection </h2>
+        <img class="project-image" src="face1.jpeg" alt="Project Image">
+        <p class="project-description">Using Python we built a program that is able to detect the face of an individual who enters the camera. The program is able to draw a box around anything it determines to be a face, and also determine who's face it is. This program takes advantage of the OpenCV library and displays frontend using flask. </p>
+      </div>
 </body>
 </html>
